@@ -9,6 +9,8 @@
       background-color: #f9f9f9;
       color: #1d1d1f;
       line-height: 1.6;
+      background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.52)),
+                  url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600') center/cover no-repeat;
     }
 
     /* Header & Navigation */
@@ -61,10 +63,9 @@
 
     /* Hero Section */
     .hero {
-      height: 100vh;
+      height: 70vh;
       min-height: 720px;
-      background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.52)),
-                  url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600') center/cover no-repeat;
+      
       color: white;
       display: flex;
       align-items: center;
@@ -194,7 +195,7 @@
     /* Footer */
     footer {
       background: #111;
-      color: #aaa;
+      color: #f9f5f5;
       padding: 4rem 5% 3rem;
       text-align: center;
       font-size: 0.92rem;
