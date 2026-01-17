@@ -1,238 +1,271 @@
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* ================= GLOBAL RESET ================= */
+/* Removes default browser spacing and ensures consistent box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background-color: #f9f9f9;
-      color: #1d1d1f;
-      line-height: 1.6;
-    }
+/* ================= BASE BODY STYLES ================= */
+/* Sets default font, background color, text color, and line spacing */
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #f9f9f9;
+  color: #1d1d1f;
+  line-height: 1.6;
+}
 
-    /* Header & Navigation */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background-color: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      transition: background-color 0.4s ease;
-    }
+/* ================= HEADER & NAVIGATION ================= */
+/* Fixed header that stays at the top while scrolling */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures header stays above all content */
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px); /* Glass / frosted effect */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: background-color 0.4s ease;
+}
 
-    nav {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1.1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* Navigation container layout */
+nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .logo {
-      font-size: 1.9rem;
-      font-weight: 800;
-      letter-spacing: -1.5px;
-      color: #000;
-      text-decoration: none;
-    }
+/* Brand logo styling */
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #000;
+  text-decoration: none;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 2.8rem;
-      list-style: none;
-    }
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  gap: 2.8rem;
+  list-style: none;
+}
 
-    .nav-links a {
-      color: #111;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.97rem;
-      transition: color 0.25s ease;
-    }
+/* Individual navigation links */
+.nav-links a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.97rem;
+  transition: color 0.25s ease;
+}
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: #d0006e;
-    }
+/* Hover and active navigation state */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #d0006e;
+}
 
-    /* Hero Section */
-    .hero {
-      height: 70vh;
-      min-height: 720px;
-      background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.52)),
-                  url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600') center/cover no-repeat;
-      color: white;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      padding: 0 5%;
-    }
+/* ================= HERO SECTION ================= */
+/* Large banner section with background image and overlay */
+.hero {
+  height: 70vh;
+  min-height: 720px;
+  background:
+    linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.52)),
+    url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600')
+    center / cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+}
 
-    .hero-content {
-      max-width: 780px;
-      margin: 0 auto;
-    }
+/* Hero content container */
+.hero-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
 
-    .hero h1 {
-      font-size: clamp(3.2rem, 7vw, 6.2rem);
-      font-weight: 900;
-      line-height: 0.95;
-      margin-bottom: 1.4rem;
-      letter-spacing: -2px;
-    }
+/* Main hero heading */
+.hero h1 {
+  font-size: clamp(3.2rem, 7vw, 6.2rem); /* Responsive font size */
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: 1.4rem;
+  letter-spacing: -2px;
+}
 
-    .hero p {
-      font-size: 1.35rem;
-      max-width: 620px;
-      margin: 0 auto 2.5rem;
-      opacity: 0.92;
-      font-weight: 300;
-    }
+/* Hero description text */
+.hero p {
+  font-size: 1.35rem;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.92;
+  font-weight: 300;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 1rem 2.4rem;
-      background-color: #d0006e;
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.05rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 20px rgba(208, 0, 110, 0.3);
-    }
+/* Primary call-to-action button */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background-color: #d0006e;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(208, 0, 110, 0.3);
+}
 
-    .btn:hover {
-      transform: translateY(-3px);
-      background-color: #b8005e;
-      box-shadow: 0 12px 32px rgba(208, 0, 110, 0.4);
-    }
+/* Button hover animation */
+.btn:hover {
+  transform: translateY(-3px);
+  background-color: #b8005e;
+  box-shadow: 0 12px 32px rgba(208, 0, 110, 0.4);
+}
 
-    /* Products Section */
-    .products {
-      padding: 9rem 5% 7rem;
-      max-width: 1440px;
-      margin: 0 auto;
-    }
+/* ================= PRODUCTS SECTION ================= */
+/* Main container for products */
+.products {
+  padding: 9rem 5% 7rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 3.2rem;
-      font-weight: 800;
-      margin-bottom: 4rem;
-      color: #111;
-    }
+/* Section heading */
+.section-title {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+  color: #111;
+}
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem 2rem;
-    }
+/* Product grid layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem 2rem;
+}
 
-    .product-card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-      transition: all 0.35s ease;
-    }
+/* Individual product card */
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  transition: all 0.35s ease;
+}
 
-    .product-card:hover {
-      transform: translateY(-14px);
-      box-shadow: 0 22px 44px rgba(0,0,0,0.14);
-    }
+/* Hover lift effect for product card */
+.product-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 22px 44px rgba(0,0,0,0.14);
+}
 
-    .product-card img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
+/* Product image styling */
+.product-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
 
-    .product-card:hover img {
-      transform: scale(1.07);
-    }
+/* Zoom effect on image hover */
+.product-card:hover img {
+  transform: scale(1.07);
+}
 
-    .product-info {
-      padding: 1.8rem 1.6rem;
-      text-align: center;
-    }
+/* Product text content */
+.product-info {
+  padding: 1.8rem 1.6rem;
+  text-align: center;
+}
 
-    .product-info h3 {
-      font-size: 1.38rem;
-      margin-bottom: 0.6rem;
-      font-weight: 700;
-      color: #111;
-    }
+/* Product title */
+.product-info h3 {
+  font-size: 1.38rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  color: #111;
+}
 
-    .product-info p {
-      color: #555;
-      font-size: 0.95rem;
-      margin-bottom: 1.3rem;
-      min-height: 48px;
-    }
+/* Product description */
+.product-info p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.3rem;
+  min-height: 48px;
+}
 
-    .btn-secondary {
-      background: transparent;
-      border: 2px solid #d0006e;
-      color: #d0006e;
-      padding: 0.8rem 2rem;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
+/* Secondary button (Shop / Price) */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #d0006e;
+  color: #d0006e;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
 
-    .btn-secondary:hover {
-      background: #d0006e;
-      color: white;
-    }
+/* Hover effect for secondary button */
+.btn-secondary:hover {
+  background: #d0006e;
+  color: white;
+}
 
-    /* Footer */
-    footer {
-      background: #111;
-      color: #f9f5f5;
-      padding: 4rem 5% 3rem;
-      text-align: center;
-      font-size: 0.92rem;
-    }
+/* ================= FOOTER ================= */
+/* Footer styling */
+footer {
+  background: #111;
+  color: #f9f5f5;
+  padding: 4rem 5% 3rem;
+  text-align: center;
+  font-size: 0.92rem;
+}
 
-    /* Responsive Adjustments */
-    @media (max-width: 900px) {
-      .nav-links {
-        display: none; /* You can add hamburger menu here */
-      }
+/* ================= RESPONSIVE ADJUSTMENTS ================= */
+/* Tablet and small laptop screens */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none; /* Placeholder for hamburger menu */
+  }
 
-      .hero {
-        min-height: 80vh;
-      }
+  .hero {
+    min-height: 80vh;
+  }
 
-      .hero h1 {
-        font-size: 3.8rem;
-      }
-    }
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+}
 
-    @media (max-width: 600px) {
-      .hero {
-        padding: 0 6%;
-      }
+/* Mobile screens */
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 6%;
+  }
 
-      .hero h1 {
-        font-size: 3.1rem;
-      }
+  .hero h1 {
+    font-size: 3.1rem;
+  }
 
-      .hero p {
-        font-size: 1.15rem;
-      }
+  .hero p {
+    font-size: 1.15rem;
+  }
 
-      .products {
-        padding: 6rem 6% 5rem;
-      }
+  .products {
+    padding: 6rem 6% 5rem;
+  }
 
-      .section-title {
-        font-size: 2.4rem;
-      }
-    }
+  .section-title {
+    font-size: 2.4rem;
+  }
+}
