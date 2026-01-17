@@ -248,13 +248,13 @@ footer {
 }
 
 /* Mobile screens */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .hero {
-    padding: 0 6%;
+    padding: 0 5%;
   }
 
   .hero h1 {
-    font-size: 3.1rem;
+    font-size: 3rem;
   }
 
   .hero p {
@@ -262,7 +262,7 @@ footer {
   }
 
   .products {
-    padding: 6rem 6% 5rem;
+    padding: 6rem 5% 5rem;
   }
 
   .section-title {
