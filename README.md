@@ -1,0 +1,1 @@
+The landing page was designed with a clean and modern layout to reflect a stylish and professional clothing brand. A minimalist color palette was used to keep the focus on the products, while accent colors were added to highlight important elements such as call-to-action buttons and special offers.
